@@ -73,9 +73,9 @@
   
 // Step 2: Get city name
 function getCity(coordinates) {
-    var xhr = new XMLHttpRequest();
-    var lat = coordinates[0];
-    var lng = coordinates[1];
+    let xhr = new XMLHttpRequest();
+    let lat = coordinates[0];
+    let lng = coordinates[1];
     
   
     // Paste your LocationIQ token below.
@@ -88,8 +88,8 @@ function getCity(coordinates) {
     function processRequest(e) {
         if (xhr.readyState == 4 && xhr.status == 200) {
             response = JSON.parse(xhr.responseText);
-              state=response.address.state;
-              city = response.address.city;
+              let state=response.address.state;
+              let city = response.address.city;
               console.log(city);
               console.log(state);
               
